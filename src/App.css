@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Henny Penny', sans-serif;
+  font-family: 'DynaPuff', sans-serif;
 }
 
 :root {
@@ -55,6 +55,16 @@
   text-shadow: 0 0 20px #9d822b;
 }
 
+.heading {
+  font-weight: 900;
+  color: var(--text);
+  text-shadow: 0 0 20px #9d822b;
+}
+
+.box-shadow-hover {
+  filter: drop-shadow(0 0 2px #9d822b);
+}
+
 .img-layer {
   height: 100%;
   width: 100%;
@@ -93,4 +103,15 @@
   text-align: center;
   top: -2px;
   z-index: 10;
+}
+
+
+.member-card {
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/images/ground.png');
+  /* background-color: #ffffff; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
