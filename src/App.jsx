@@ -81,6 +81,12 @@ function App() {
             <SectionContainer title={'Members'} >
               <AnimatedTooltip items={people} />
             </SectionContainer>
+            <SectionContainer title={'Members'} >
+              <AnimatedTooltip items={people} />
+            </SectionContainer>
+            <SectionContainer title={'Members'} >
+              <AnimatedTooltip items={people} />
+            </SectionContainer>
           </article>
           {/* 
           repeat the first section and render the footer there
