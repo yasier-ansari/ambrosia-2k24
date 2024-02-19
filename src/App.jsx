@@ -1,7 +1,6 @@
 import './App.css'
 import layerBaseImage from './assets/images/layer-base.png'
 import layerMiddleImage from './assets/images/layer-middle.png'
-import layerMiddleFooterImage from './assets/images/layer-middle-footer.png'
 import layerFrontImage from './assets/images/layer-front.png'
 import dungeonImage from './assets/images/dungeon.jpg'
 import { useEffect } from "react"
@@ -64,8 +63,8 @@ function App() {
   }, [])
   return (
     <div className="flex flex-col w-full min-h-screen  scroll-smooth " >
-      <div className="wrapper h-full w-full ">
-        <div className="content relative flex flex-col min-h-screen w-full h-full">
+      <div className="wrapper">
+        <div className="content">
           <Header />
           <div className="header-main" >
             <div className="layers">
@@ -78,43 +77,27 @@ function App() {
               <div className="img-layer layer-front" style={{ backgroundImage: `url(${layerFrontImage})` }} ></div>
             </div>
           </div>
-          <article className="article-main relative" style={{
-            backgroundImage: `url(${dungeonImage})`, backgroundSize: 'cover',
-            backgroundPosition: 'center', backgroundAttachment: 'fixed'
-          }} >
+          <article className="article-main" style={{ backgroundImage: `url(${dungeonImage})` }} >
             <SectionContainer title={'Members'} >
               <AnimatedTooltip items={people} />
             </SectionContainer>
-            <SectionContainer title={'Members'} >
-              <AnimatedTooltip items={people} />
-            </SectionContainer>
-            <SectionContainer title={'Members'} >
-              <AnimatedTooltip items={people} />
-            </SectionContainer>
-            <SectionContainer title={'Members'} >
-              <AnimatedTooltip items={people} />
-            </SectionContainer>
-            <div className=" pb-96 " ></div>
           </article>
-          <div className="object-cover h-full w-full bg-no-repeat bg-contain bg-bottom absolute -bottom-[400px] z-[99] " style={{ backgroundImage: `url(${layerMiddleFooterImage})` }} >
-          </div>
-          <div className="object-cover text-white h-full w-full bg-cover bg-bottom absolute -bottom-[400px] z-[99] " style={{ backgroundImage: `url(${layerFrontImage})` }} >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, cum! Nesciunt mollitia quibusdam dolorum, consequatur blanditiis debitis fugiat illo quae. Illo rem veritatis at nemo vero nesciunt delectus. A, cumque!
-          </div>
-          {/* <div className="header-main" >
+          {/* 
+          repeat the first section and render the footer there
+          <div className="header-main" >
             <div className="layers">
-              <div className="layer-head ">
+              <div className="layer-head">
                 <div className="caption henny  text-8xl -mt-20 ">AMBROSIA</div>
                 <div className=" forum text-4xl">The Magic Begins</div>
               </div>
-              <div className="img-layer layer-mid" style={{ backgroundImage: `url(${layerMiddleFooterImage})` }}></div>
-              <div className="img-layer layer-mid" style={{ backgroundImage: `url(${layerMiddleFooterImage})` }} ></div>
-              <div className="img-layer layer-mid" style={{ backgroundImage: `url(${layerMiddleFooterImage})` }} ></div>
+              <div className="img-layer layer-base" style={{ backgroundImage: `url(${layerBaseImage})` }}></div>
+              <div className="img-layer layer-mid" style={{ backgroundImage: `url(${layerMiddleImage})` }} ></div>
+              <div className="img-layer layer-front" style={{ backgroundImage: `url(${layerFrontImage})` }} ></div>
             </div>
           </div> */}
         </div>
       </div>
-    </div >
+    </div>
   )
 }
 
